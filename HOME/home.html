@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Iceland</title>
+    <link rel="stylesheet" href="home.css">
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+</head>
+<body onload="showClock()">
+
+        <button class="menu-toggle"></button>
+        <nav>
+          <ul class="menu">
+            <li id="home" data-text="Home">Home</li>
+            <li id="about" data-text="About Iceland">About Iceland</li>
+            <li id="made" data-text="Made in Iceland">Made in Iceland</li>
+            <li id="travel" data-text="About Travel">About Travel</li>
+          </ul>
+        </nav>
+
+      
+
+      <div id="top">
+        <div class="perspective">
+            <div class="card">
+                <div class="thumb" style="background-image: url(../image/pix1.jpg)"></div>
+                <h2>Welcome to Iceland</h2>
+                <div id="cl" class="clock">
+                  <div id="divClock"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="home.js"></script>
+    <script src="home_3d.js"></script>
+    <script src="home_animation.js"></script>
+    <script src="home_time.js"></script>
+
+</body>
+</html>

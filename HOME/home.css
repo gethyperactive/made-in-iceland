@@ -1,0 +1,400 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translate3d(0, 200px, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translateZ(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInleft {
+  0% {
+      opacity: 0;
+      transform: translate3d(-200px, 0, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translate3d(0, 200px, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translateZ(1);
+  }
+}
+
+body {
+  background-color: #f3f8fa;
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* body{
+  overflow: hidden;
+  -ms-overflow-style: none;
+  background-color: #ffffff;
+} */
+::-webkit-scrollbar {
+  display: none;
+}
+  
+  
+/* ----------------------------------------------------------------------------------------------- */
+
+  /* .clock{
+    position: absolute;
+    display: table;
+    width: 33%;
+    height: 22vh;
+    top: 66vh;
+    left: 5%;
+  } */
+
+
+  /* .clock div{
+    font-size: 2vw;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }  */
+  
+  /* ----------------------------------------------------------------------------------------------- */
+
+  .perspective {
+    animation: fadeInUp 2s;
+    width: 100%;
+    perspective: 1000px;
+  }
+  
+  #top {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .card {
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+    box-shadow: 0 70px 63px -60px #494848;
+    transform-style: preserve-3d;
+    transition: transform 0.05s linear;
+  }
+  .card .thumb {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+  }
+  .card .thumb:after {
+    background: inherit;
+    content: "";
+    display: block;
+    position: absolute;
+    left: -60px;
+    top: 40px;
+    width: 100%;
+    height: 108%;
+    z-index: -1;
+    filter: blur(55px);
+  }
+  .card h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 80px;
+    transform: translateZ(170px);
+    font-family: 'Potta One', cursive;
+    color: #ffffff;
+  }
+  .card .clock{
+    position: absolute;
+    bottom: 0;
+    right: 5vw;
+    font-size: 50px;
+    font-weight: 600;
+    transform: translateZ(140px);
+    font-family: 'Potta One', cursive;
+    color: #ffffff;
+  }
+
+  /* --------------------------------------------------------------------------- */
+
+/* html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+} */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  cursor: pointer;
+  padding: 6px 20px;
+  font-size: 48px;
+}
+
+button {
+  animation: fadeIn 2s;
+  opacity: 0.6;
+  background-color: transparent;
+  position: fixed;
+  z-index: 2;
+  top: 24px;
+  left: 24px;
+  border: none;
+  width: 36px;
+  height: 30px;
+  outline: none;
+  transition: opacity 0.2s ease-out;
+}
+button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: auto;
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(85, 179, 255), rgb(85, 179, 255) 20%, transparent 20%, transparent 40%, rgb(85, 179, 255) 40%, rgb(85, 179, 255) 60%, transparent 60%, transparent 80%, rgb(85, 179, 255) 80%, rgb(85, 179, 255) 100%);
+  transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
+}
+button:after {
+  opacity: 0;
+  content: "×";
+  color: #f3f8fa;
+  position: absolute;
+  top: 16px;
+  left: -4px;
+  font-family: Arial, sans-serif;
+  font-size: 76px;
+  line-height: 0;
+  transition: opacity 0.4s ease-out;
+}
+button:active {
+  transform: translateY(2px);
+}
+button:hover {
+  opacity: 1;
+}
+.open button {
+  opacity: 1;
+}
+.open button:before {
+  opacity: 0;
+  width: 0;
+}
+.open button:after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate(360deg);
+  transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+}
+nav:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: rgb(80, 136, 181);
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 100%;
+  transform: scale(0.04), translateY(9999px);
+  overflow: hidden;
+}
+.open nav {
+  top: 0;
+}
+.open nav:before {
+  -webkit-animation: menu-animation 0.8s ease-out forwards;
+          animation: menu-animation 0.8s ease-out forwards;
+}
+
+ul.menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  perspective: 1000;
+  color: #f3f8fa;
+}
+ul.menu li {
+  opacity: 0;
+  text-align: center;
+  transform: translate3d(0, 36px, 0);
+  font-family: 'Potta One', cursive;
+}
+ul.menu li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  left: auto;
+  background-color: #f3f8fa;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.5s ease-out;
+}
+ul.menu li:after {
+  opacity: 0;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: rgb(80, 136, 181);
+  overflow: hidden;
+  transform: translate(-24px, 6px);
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+ul.menu li:hover:before {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+ul.menu li:hover:after {
+  opacity: 1;
+  padding: 0 20px;
+  transform: translate(0px, 6px);
+  transition: transform 0.2s 0.14s ease-out, opacity 0.5s 0.2s ease-out;
+}
+.open ul.menu li {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+.open ul.menu li:nth-child(1) {
+  transition-delay: 0.75s;
+}
+.open ul.menu li:nth-child(2) {
+  transition-delay: 0.85s;
+}
+.open ul.menu li:nth-child(3) {
+  transition-delay: 0.95s;
+}
+.open ul.menu li:nth-child(4) {
+  transition-delay: 1.05s;
+}
+
+@-webkit-keyframes menu-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.04) translateY(300%);
+  }
+  40% {
+    transform: scale(0.04) translateY(0);
+    transition: ease-out;
+  }
+  40% {
+    transform: scale(0.04) translateY(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.02) translateY(0px);
+  }
+  61% {
+    transform: scale(0.04);
+  }
+  99.9% {
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(2);
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
+}
+
+@keyframes menu-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.04) translateY(300%);
+  }
+  40% {
+    transform: scale(0.04) translateY(0);
+    transition: ease-out;
+  }
+  40% {
+    transform: scale(0.04) translateY(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.02) translateY(0px);
+  }
+  61% {
+    transform: scale(0.04);
+  }
+  99.9% {
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(2);
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
+}

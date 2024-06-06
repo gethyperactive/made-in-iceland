@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made in Iceland</title>
+    <link rel="stylesheet" href="made_in_iceland.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Flip.min.js"></script>
+</head>
+<body>
+
+
+          <button class="menu-toggle"></button>
+        <nav>
+          <ul class="menu">
+            <li id="home" data-text="Home">Home</li>
+            <li id="about" data-text="About Iceland">About Iceland</li>
+            <li id="made" data-text="Made in Iceland">Made in Iceland</li>
+            <li id="travel" data-text="About Travel">About Travel</li>
+          </ul>
+        </nav>
+
+
+          <main class="platform">
+            <header>
+              <h1>Made in Iceland</h1>
+              <h2>아이슬란드가 만들어낸 보물입니다.</h2>
+              <p>직접 촬영한 장소들입니다. <mark class="mark mark--primary">사진을 클릭</mark>하시면 자세한 설명과 함게 보실 수 있습니다.<button type="button" id="alpha-order" class="button-inline" ></button></p>
+            </header>
+            <div class="grid">
+              <article class="article article-1">
+                <a href="#">
+                  <img src="../image/jokulsarlon.jpg" alt="">
+                </a>
+                <section class="description">
+                  <h2>Jökulsárlón</h2>
+                  <div class="details-view">
+                    <p>아이슬란드 남동쪽에서 커다란 얼음 덩어리로 가득한 빙하 호수를 찾아보실 수 있습니다. 이 빙하 호수는 아름다운 경관으로 아이슬란드의 가장 유명한 볼거리로 손꼽힙니다. 이 호수는 요쿨살론(Jökulsárlón) 혹은 빙하 강 호수로 불립니다.</p>
+
+                  </div>
+                </section>
+              </article>
+              <article class="article article-2">
+                <a href="#">
+                  <img src="../image/Skaftafell.jpg" alt="">
+                </a>
+                <section class="description">
+                  <h2>Skaftafell</h2>
+                  <div class="details-view">
+                    <p>스카프타펠은 모래와 빙하 사이에서 자라는 풍부한 식물군과 놀랍고 대조되는 풍경으로 유명합니다. 방문객들은 계단식 폭포에서 빙하 석호, 지질학적 구조물에서 검은 모래 사막에 이르기까지 풍부한 자연 명소를 발견하게 될 것이며, 자격을 갖춘 가이드와 함께 빙벽 등반이나 빙하 하이킹을 체험할 수 있는 훌륭한 지역입니다.</p>
+
+                  </div>
+                </section>
+              </article>
+              <article class="article article-3">
+                <a href="#">
+                  <img src="../image/godafoss.jpg" alt="">
+                </a>
+          
+                <section class="description">
+                  <h2>Goðafoss</h2>
+                  <div class="details-view">
+                    <p>고다포스는 아이슬란드 북부 중앙 미바튼 지역의 스캴판다플리오트강에 위치해 있는 폭포로 아이슬란드어로 '신의 폭포'라는 의미를 갖고 있다고 합니다. 12m 높이의 반원형 절벽에서 30m의 폭으로 폭포수가 떨어지는 장관을 만끽할 수 있습니다.</p>
+
+                  </div>
+                </section>
+              </article>
+              <article class="article article-4">
+                <a href="#">
+                  <img src="../image/Barnafossar.jpg" alt="">
+                </a>
+                <section class="description">
+                  <h2>Barnafossar</h2>
+                  <div class="details-view">
+                    <p>바르나포사르는 화산암의 좁은 통로를 통해 일련의 급류를 닮은 층층 계곡 폭포입니다. 빙하에서 물이 녹고 회색에서 밝은 유백색의 퇴적물을 운반하기 때문에 흰색입니다.</p>
+
+                  </div>
+                </section>
+              </article>
+              <article class="details article article-5" style="--max:1">
+                <a href="#">
+                  <img src="../image/diamond_beach.jpg" alt="">
+                </a>
+                <section class="description">
+                  <h2>Diamond Beach</h2>
+                  <div class="details-view" style="opacity: 1; transform: translateY(0)">
+                    <p>요쿨살론 근처의 길게 뻗은 검은모래해변 위에 커다랗고 단단한 수천년된 얼음덩어리가 마치 다이아몬드처럼 햇살아래에서 빛나고 있어 다이아몬드 해변이라고 불리기도 합니다.</p>
+
+                  </div>
+                </section>
+              </article>
+              <article class="article article-6">
+                <a href="#">
+                  <img src="../image/krafla.jpg" alt="">
+                </a>
+                <section class="description">
+                  <h2>Krafla</h2>
+                  <div class="details-view">
+                    <p>크라플라 화산지대는 1724년부터 1980년대 중반까지 이어진 화산폭발에 의해 형성되었습니다. 마지막 분화 이후 30여 년이 지났지만, 땅속 가까운 곳에서는 여전히 마그마가 들끓고 있는 활화산 지역입니다.</p>
+
+                  </div>
+                </section>
+              </article>
+              <article class="article article-7">
+                <a href="#">
+                  <img src="../image/husavik.jpg" alt="">
+                </a>
+                <section class="description">
+                  <h2>Húsavík</h2>
+                  <div class="details-view">
+                    <p>후사비크는 아이슬란드의 북쪽에 있는 작은 마을로 고래투어로 유명한 곳입니다. 고래투어는 연중 무휴로 진행됩니다. 투어 시 고래가 불시에 나타났다가 바로 물속으로 들어가기에 자세히 관찰하기 어려울 것 입니다. 겨울이 아니면 배를 타고 나가서 낚시를 할 수도 있습니다.</p>
+
+                  </div>
+                </section>
+              </article>
+              <article class="article article-8">
+                <a href="#">
+                  <img src="../image/latrabjarg.jpg" alt="">
+                </a>
+                <section class="description">
+                  <h2>Látrabjarg</h2>
+                  <div class="details-view">
+                    <p>라트라브야르그는 웨스트피오르 서쪽 땅끝에 있는 길이가 무려 14㎞에 이르고, 최대 높이는 441m에 달하는 거대한 절벽입니다. 가파른 절벽에 새들이 서식하는데 그 새가 바로 '퍼핀'입니다.</p>
+                    <!-- <button type="button">Move to top</button> -->
+                  </div>
+                </section>
+              </article>
+            </div>
+          </main>
+
+
+
+
+
+
+
+
+            <script src="made_in_iceland_ui.js"></script>
+            <script src="made_in_iceland.js"></script>
+            <script src="made_in_iceland_animation.js"></script>
+</body>
+</html>
